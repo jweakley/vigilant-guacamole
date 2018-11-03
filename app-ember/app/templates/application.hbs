@@ -1,2 +1,19 @@
-<h1>Vigilant Guacamole</h1>
-{{outlet}}
+<div class='containter'>
+  {{#bs-navbar type=type backgroundColor='primary' as |navbar|}}
+    <div class="navbar-header">
+      {{navbar.toggle}}
+      {{#link-to "index" class="navbar-brand"}}Brand{{/link-to}}
+    </div>
+    {{#navbar.content}}
+      {{#navbar.nav as |nav|}}
+        {{#nav.item}}
+          {{#nav.link-to "area-map"}}Map{{/nav.link-to}}
+        {{/nav.item}}
+        {{#nav.item}}
+          {{#nav.link-to "index"}}Account{{/nav.link-to}}
+        {{/nav.item}}
+      {{/navbar.nav}}
+    {{/navbar.content}}
+  {{/bs-navbar}}
+  {{outlet}}
+</div>

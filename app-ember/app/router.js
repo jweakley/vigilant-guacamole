@@ -19,6 +19,8 @@ Router.map(function() {
   this.route('edit-account', {
     path: '/edit-account/:user_id'
   });
+
+  this.route('area-map');
 });
 
 export default Router;

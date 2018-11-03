@@ -1,6 +1,6 @@
 
 class EmberApplicationController < EmberCli::EmberController
-  skip_before_action :authenticate
+  skip_before_action :authenticate, raise: false
 
   def api_not_found
     render status: 404, nothing: true

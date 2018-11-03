@@ -7,6 +7,13 @@ module.exports = function(defaults) {
     emberAuthenticateMe: {
       importCSS: true
     },
+
+    'ember-bootstrap': {
+      'bootstrapVersion': 4,
+      'importBootstrapFont': false,
+      'importBootstrapCSS': false,
+      'whitelist': [],
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
