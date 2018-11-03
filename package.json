@@ -1,0 +1,18 @@
+{
+  "name": "vigilant-guacamole",
+  "version": "1.0.0",
+  "description": "VIDEOGAME!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jweakley/vigilant-guacamole.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jweakley/vigilant-guacamole/issues"
+  },
+  "homepage": "https://github.com/jweakley/vigilant-guacamole#readme",
+  "engines": {
+    "node": "~10.13.0",
+    "npm": "~6.4.1"
+  }
+}
