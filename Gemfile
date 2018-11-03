@@ -51,3 +51,5 @@ gem 'ember-cli-rails', '~> 0.10.0'
 gem 'rails_12factor', group: %i[staging production]
 
 gem "token_authenticate_me", "~> 0.10.0"
+
+gem "puma-heroku", "~> 1.0"
