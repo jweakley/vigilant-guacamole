@@ -1,5 +1,5 @@
 # This migration comes from token_authenticate_me (originally 20160622203801)
-class CreateTokenAuthenticateMeSessions < ActiveRecord::Migration[5.2]
+class CreateTokenAuthenticateMeSessions < ActiveRecord::Migration[4.2]
   def change
     create_table :token_authenticate_me_sessions do |t|
       t.string   :key, null: false

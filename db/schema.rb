@@ -17,17 +17,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_021562) do
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
-  create_table "token_authenticate_me_invites", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "email", null: false
-    t.boolean "accepted"
-    t.jsonb "meta", default: "{}", null: false
-    t.integer "creator_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["creator_id"], name: "index_token_authenticate_me_invites_on_creator_id"
-  end
-
-  create_table "token_authenticate_me_sessions", force: :cascade do |t|
+  create_table "token_authenticate_me_sessions", id: :serial, force: :cascade do |t|
     t.string "key", null: false
     t.datetime "expiration"
     t.integer "user_id"
@@ -36,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_11_03_021562) do
     t.index ["key"], name: "index_token_authenticate_me_sessions_on_key", unique: true
   end
 
-  create_table "token_authenticate_me_users", force: :cascade do |t|
+  create_table "token_authenticate_me_users", id: :serial, force: :cascade do |t|
     t.string "username", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
@@ -50,6 +40,5 @@ ActiveRecord::Schema.define(version: 2018_11_03_021562) do
     t.index ["username"], name: "index_token_authenticate_me_users_on_username", unique: true
   end
 
-  add_foreign_key "token_authenticate_me_invites", "token_authenticate_me_users", column: "creator_id"
   add_foreign_key "token_authenticate_me_sessions", "token_authenticate_me_users", column: "user_id"
 end

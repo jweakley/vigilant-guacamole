@@ -7,7 +7,7 @@ File.open('.ruby-version', 'rb') do |file|
   ruby file.read.strip
 end
 
-gem 'api_me', '~> 0.9.4', github: 'wildland/api_me', branch: 'update-kaminari'
+gem 'api_me', '~> 0.10.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
@@ -50,6 +50,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'ember-cli-rails', '~> 0.10.0'
 gem 'rails_12factor', group: %i[staging production]
 
-gem "token_authenticate_me", "~> 0.10.0"
+gem "token_authenticate_me", "~> 0.11.0"
 
 gem "puma-heroku", "~> 1.0"
