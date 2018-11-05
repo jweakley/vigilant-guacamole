@@ -226,6 +226,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.10.8)
   annotate
   api_me (~> 0.10.1)
   bootsnap (>= 1.1.0)
